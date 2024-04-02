@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversitiesModelStoreContainer" CdmEntityContainer="UniversitiesEntities">
+    <EntitySetMapping Name="Facultatis">
+      <EntityTypeMapping TypeName="UniversitiesModel.Facultati">
+        <MappingFragment StoreEntitySet="Facultati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="NumeFac" ColumnName="NumeFac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universitatis">
+      <EntityTypeMapping TypeName="UniversitiesModel.Universitati">
+        <MappingFragment StoreEntitySet="Universitati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameUniv" ColumnName="NameUniv" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

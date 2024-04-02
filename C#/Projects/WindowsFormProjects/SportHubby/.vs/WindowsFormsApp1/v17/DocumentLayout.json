@@ -1,0 +1,471 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formeventpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formeventpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formadv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formadv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formattending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formattending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\unittestproject1\\unittest2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|c:\\users\\cristi\\desktop\\an3\\sem2\\sem2\\ii\\proiect\\proiect_ii\\ii_proiect\\windowsformsapp1\\unittestproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formeventcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formeventcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\unittestproject1\\unittest6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\unittestproject1\\unittest5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\unittestproject1\\unittest4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\unittestproject1\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C35996F-6F9F-4250-9684-AAC48E425493}|UnitTestProject1\\UnitTestProject1.csproj|solutionrelative:unittestproject1\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formeventcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formeventcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\sportevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\sportevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formadv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formadv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formattending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formattending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formeventpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formeventpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\formsignup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formsignup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\resources\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\resources\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\windowsformsapp1\\resources\\logo smol.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{C2DAE0E5-3CCE-4BED-974A-0086BA12FA4C}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\resources\\logo smol.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormAttending.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAttending.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAttending.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAttending.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAttending.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:48.798Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UnitTest2.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest2.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest2.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest2.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest2.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:48.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormEventControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventControl.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormEventControl.cs",
+              "ToolTip": "C:\\Users\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventControl.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-04-02T09:38:49.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormEventPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormEventPage.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventPage.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormEventPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.113Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormLogIn.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormLogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.114Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormAdv.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAdv.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAdv.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAdv.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAdv.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:48.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormMainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormMainMenu.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormMainMenu.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormMainMenu.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormMainMenu.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAApwHsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormControls.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormControls.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormControls.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormControls.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormControls.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:48.726Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormMainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormMainMenu.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormMainMenu.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormMainMenu.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormMainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.115Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormSignUp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormSignUp.cs",
+              "ToolTip": "C:\\Users\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-04-02T09:38:49.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormLogIn.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormLogIn.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAIA9wDUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Product.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UnitTest3.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest3.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest3.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest3.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest3.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwFAAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UnitTest4.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest4.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest4.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest4.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest4.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAYwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UnitTest6.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest6.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest6.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest6.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest6.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAYwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UnitTest5.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest5.cs",
+              "RelativeDocumentMoniker": "UnitTestProject1\\UnitTest5.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\UnitTestProject1\\UnitTest5.cs",
+              "RelativeToolTip": "UnitTestProject1\\UnitTest5.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAYwCEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormSignUp.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormSignUp.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormSignUp.cs",
+              "ViewState": "AQIAALQAAAAAAAAAAAAtwLkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-04-02T09:38:49.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SportEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\SportEvent.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\SportEvent.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\SportEvent.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\SportEvent.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormEventControl.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventControl.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormEventControl.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventControl.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormEventControl.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAP8BAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-04-02T09:38:49.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormAdv.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAdv.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAdv.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAdv.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAdv.cs",
+              "ViewState": "AQIAABEBAAAAAAAAAAAmwCgBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormAttending.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAttending.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAttending.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormAttending.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAttending.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAmwLgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormEventPage.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormEventPage.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormEventPage.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormEventPage.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAAmwMoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormControls.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormControls.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormControls.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormControls.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormControls.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormLogIn.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormLogIn.Designer.cs",
+              "ToolTip": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormLogIn.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormLogIn.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:38:49.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormSignUp.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormSignUp.Designer.cs",
+              "ToolTip": "C:\\Users\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.Designer.cs*",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Bogdana\\Documents\\an3\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\FormSignUp.Designer.cs*",
+              "ViewState": "AQIAAKEAAAAAAAAAAAASwLUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2024-04-02T09:38:49.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "logo.png - PNG [1000x398, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo.png",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Resources\\logo.png",
+              "ToolTip": "D:\\AUTCN\\AN III\\SEM II\\II\\Proiect bun\\PROIECT_II-main\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo.png - PNG [1000x398, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-04-02T09:38:49.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "logo smol.png - PNG [263x263, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Cristi\\Desktop\\An3\\sem2\\sem2\\II\\Proiect\\PROIECT_II\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo smol.png",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Resources\\logo smol.png",
+              "ToolTip": "D:\\AUTCN\\AN III\\SEM II\\II\\Proiect bun\\PROIECT_II-main\\II_PROIECT\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo smol.png - PNG [263x263, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-04-02T09:38:49.13Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

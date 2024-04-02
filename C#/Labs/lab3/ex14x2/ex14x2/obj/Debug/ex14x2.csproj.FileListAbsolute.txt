@@ -1,0 +1,10 @@
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\bin\Debug\ex14x2.exe.config
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\bin\Debug\ex14x2.exe
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\bin\Debug\ex14x2.pdb
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.csproj.AssemblyReference.cache
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.Properties.Resources.resources
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.csproj.GenerateResource.cache
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.csproj.CoreCompileInputs.cache
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.exe
+C:\Users\Bogdana\Documents\an3\sem2\II\Lab\Lab3\ex14x2\ex14x2\obj\Debug\ex14x2.pdb

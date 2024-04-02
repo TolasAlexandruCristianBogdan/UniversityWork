@@ -1,0 +1,2 @@
+C:\Users\Bogdana\Documents\an3\sem2\II\Proiect\PROIECT_II\II_PROIECT\WindowsFormsApp1\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.AssemblyReference.cache
+C:\Users\Bogdana\Documents\an3\sem2\II\Proiect\PROIECT_II\II_PROIECT\WindowsFormsApp1\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
