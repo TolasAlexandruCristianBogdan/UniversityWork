@@ -1,0 +1,14 @@
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\bin\Debug\net8.0\ex4.exe
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\bin\Debug\net8.0\ex4.deps.json
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\bin\Debug\net8.0\ex4.runtimeconfig.json
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\bin\Debug\net8.0\ex4.dll
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\bin\Debug\net8.0\ex4.pdb
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.GeneratedMSBuildEditorConfig.editorconfig
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.AssemblyInfoInputs.cache
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.AssemblyInfo.cs
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.csproj.CoreCompileInputs.cache
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.dll
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\refint\ex4.dll
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.pdb
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ex4.genruntimeconfig.cache
+C:\FACULTA\AN3SEM2\II\Labs\Laboratorul 1\ex4\ex4\obj\Debug\net8.0\ref\ex4.dll

@@ -1,0 +1,259 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>main_nicholes</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-11-23"><meta name="DC.source" content="main_nicholes.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Nichols diagrams</a></li><li><a href="#2">Ploting the nichols chart</a></li><li><a href="#3">Drawing the gaion and phase margins</a></li><li><a href="#4">Stability anlaysis depending on  k , k from (0,inf)</a></li><li><a href="#5">Stability analysis depending on time delay</a></li></ul></div><h2 id="1">Nichols diagrams</h2><pre class="codeinput">close; clc; clear;
+
+<span class="comment">% defining the system</span>
+k = 0.05;        <span class="comment">%proportional controoller</span>
+tm = 0.015;     <span class="comment">%time delay</span>
+H = tf(9e4, [1 135 0], <span class="string">'iodelay'</span>, tm);
+display(H);
+
+Hol = k*H;
+display(Hol);
+</pre><pre class="codeoutput">
+H =
+ 
+                     90000
+  exp(-0.015*s) * -----------
+                  s^2 + 135 s
+ 
+Continuous-time transfer function.
+
+
+Hol =
+ 
+                     4500
+  exp(-0.015*s) * -----------
+                  s^2 + 135 s
+ 
+Continuous-time transfer function.
+
+</pre><h2 id="2">Ploting the nichols chart</h2><pre class="codeinput">figure;
+nichols(Hol)
+title(<span class="string">'Open loop Nichols diagram'</span>);
+xlabel(<span class="string">"$\angle [H_{ol}(j\cdot\omega)]$"</span>, <span class="string">'interpreter'</span>, <span class="string">'latex'</span>,<span class="string">'FontSize'</span>,14);
+ylabel(<span class="string">"$ |[H_{ol}(j\cdot\omega)|^{dB}$"</span>, <span class="string">'interpreter'</span>, <span class="string">'latex'</span>,<span class="string">'FontSize'</span>,14);
+shg; grid;
+
+<span class="comment">% Centering the critical point (-1, 0j) from Nyquist (-180, 0dB)</span>
+axis([-270 -45 -30 30]);
+</pre><img vspace="5" hspace="5" src="main_nicholes_01.png" alt=""> <h2 id="3">Drawing the gaion and phase margins</h2><p>1. Phase margin     we need:         -cutoff frequency         -phase at cutoff freq.</p><pre class="codeinput"><span class="comment">% reading from the graph</span>
+wc = 32.4;
+phase_wc = -131;
+
+<span class="comment">% adding it to the graph</span>
+hold <span class="string">on</span>
+plot([-180, phase_wc], [0 0], <span class="string">'r-'</span>, <span class="string">'LineWidth'</span>, 3);
+plot(phase_wc, 0, <span class="string">'r&gt;'</span>, <span class="string">'LineWidth'</span>, 3);
+
+pm = 180 + phase_wc; <span class="comment">%the phase margins</span>
+text(-180+pm/2,2, [<span class="string">'\gamma_k = '</span> num2str(round(pm)), <span class="string">'^o'</span>], <span class="string">'Color'</span>, <span class="string">'r'</span>,<span class="string">'FontSize'</span>,12);
+hold <span class="string">off</span>;
+
+<span class="comment">% 2. Magnitude margin</span>
+<span class="comment">%         we need:</span>
+<span class="comment">%             -frequency in pi</span>
+<span class="comment">%             -gain in pi</span>
+
+<span class="comment">% reading from the graph</span>
+wpi  = 72;
+mwpi = -7.78;
+
+<span class="comment">% adding it to the graph</span>
+hold <span class="string">on</span>
+plot([-180 -180],[0 mwpi], <span class="string">'b-'</span>,LineWidth=3 );
+plot(-180,mwpi,<span class="string">'bv'</span>,LineWidth=3);
+text(-175,mwpi/2,[<span class="string">'m_k = '</span> num2str(round(mwpi)) <span class="string">'dB'</span>], <span class="string">'color'</span>, <span class="string">'blue'</span>,<span class="string">'FontSize'</span>,12);
+hold <span class="string">off</span>
+</pre><img vspace="5" hspace="5" src="main_nicholes_02.png" alt=""> <h2 id="4">Stability anlaysis depending on  k , k from (0,inf)</h2><pre class="codeinput">kc = 1/10^(mwpi/20);
+display(kc)
+
+<span class="comment">%-&gt; the system is closed loop stable for k in (k*kc) = (0.05*2.4491)</span>
+<span class="comment">% the max value of k:</span>
+k_max = k*kc;
+display(k_max);
+
+nichols(k_max*H);
+axis([-270 -45 -20 20])
+</pre><pre class="codeoutput">
+kc =
+
+    2.4491
+
+
+k_max =
+
+    0.1225
+
+</pre><img vspace="5" hspace="5" src="main_nicholes_03.png" alt=""> <h2 id="5">Stability analysis depending on time delay</h2><pre class="codeinput">taum = (pi/2-atan(wc/131))/wc;
+
+<span class="comment">%delay margin</span>
+dm = taum-tm;
+tm_max = taum;
+H = tf(9e4, [1 135 0], <span class="string">'iodelay'</span>, tm_max);
+nichols(k*H);
+axis([-270 -45 -20 20])
+hold <span class="string">on</span>
+H = tf(9e4, [1 135 0], <span class="string">'iodelay'</span>, tm);
+nichols(k*H);
+hold <span class="string">off</span>
+legend(<span class="string">"tau = taum"</span>, <span class="string">"tau = tm"</span>);
+</pre><img vspace="5" hspace="5" src="main_nicholes_04.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Nichols diagrams
+close; clc; clear;
+
+% defining the system
+k = 0.05;        %proportional controoller
+tm = 0.015;     %time delay
+H = tf(9e4, [1 135 0], 'iodelay', tm);
+display(H);
+
+Hol = k*H;
+display(Hol);
+
+%% Ploting the nichols chart
+figure;
+nichols(Hol)
+title('Open loop Nichols diagram');
+xlabel("$\angle [H_{ol}(j\cdot\omega)]$", 'interpreter', 'latex','FontSize',14);
+ylabel("$ |[H_{ol}(j\cdot\omega)|^{dB}$", 'interpreter', 'latex','FontSize',14);
+shg; grid;
+
+% Centering the critical point (-1, 0j) from Nyquist (-180, 0dB)
+axis([-270 -45 -30 30]);
+
+%% Drawing the gaion and phase margins 
+% 1. Phase margin
+%     we need:
+%         -cutoff frequency
+%         -phase at cutoff freq.
+
+% reading from the graph
+wc = 32.4;
+phase_wc = -131;
+
+% adding it to the graph
+hold on 
+plot([-180, phase_wc], [0 0], 'r-', 'LineWidth', 3);
+plot(phase_wc, 0, 'r>', 'LineWidth', 3);
+
+pm = 180 + phase_wc; %the phase margins
+text(-180+pm/2,2, ['\gamma_k = ' num2str(round(pm)), '^o'], 'Color', 'r','FontSize',12);
+hold off;
+
+% 2. Magnitude margin
+%         we need:
+%             -frequency in pi
+%             -gain in pi
+
+% reading from the graph
+wpi  = 72;
+mwpi = -7.78;
+
+% adding it to the graph
+hold on
+plot([-180 -180],[0 mwpi], 'b-',LineWidth=3 );
+plot(-180,mwpi,'bv',LineWidth=3);
+text(-175,mwpi/2,['m_k = ' num2str(round(mwpi)) 'dB'], 'color', 'blue','FontSize',12);
+hold off
+
+%% Stability anlaysis depending on  k , k from (0,inf)
+
+kc = 1/10^(mwpi/20);
+display(kc)
+
+%-> the system is closed loop stable for k in (k*kc) = (0.05*2.4491)
+% the max value of k:
+k_max = k*kc;
+display(k_max);
+
+nichols(k_max*H);
+axis([-270 -45 -20 20])
+
+%% Stability analysis depending on time delay
+taum = (pi/2-atan(wc/131))/wc;
+
+%delay margin
+dm = taum-tm;
+tm_max = taum;
+H = tf(9e4, [1 135 0], 'iodelay', tm_max);
+nichols(k*H);
+axis([-270 -45 -20 20])
+hold on
+H = tf(9e4, [1 135 0], 'iodelay', tm);
+nichols(k*H);
+hold off
+legend("tau = taum", "tau = tm");
+
+
+
+##### SOURCE END #####
+--></body></html>

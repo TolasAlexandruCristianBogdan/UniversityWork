@@ -1,0 +1,300 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ex_1</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-10-12"><meta name="DC.source" content="ex_1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">4.1 Problems: Nyquist diagrams</a></li><li><a href="#2">The frequencie regions</a></li><li><a href="#3">Simulating a sinwave input with a 1rad/s freq.</a></li><li><a href="#4">Simulating a sinwave input with a 1.3 rad/s freq.</a></li><li><a href="#5">b)</a></li><li><a href="#6">c)</a></li><li><a href="#7">d)</a></li></ul></div><h2 id="1">4.1 Problems: Nyquist diagrams</h2><p>a) Defining the tf function and ploting a the coresponding nyqusit diagramm</p><pre class="codeinput">H = tf([2], [1 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+<span class="comment">% only showing the positive freq.</span>
+setoptions(p,<span class="string">'ShowFullContour'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% plot a red, dashed line unit (0.7) circle</span>
+hold;
+x=0:0.1:2*pi;
+plot(0.7*sin(x),0.7*cos(x),<span class="string">'--r'</span>);
+shg;
+
+<span class="comment">% Calculating the band_with freq.</span>
+<span class="keyword">for</span> i = 1:length(wout)
+    <span class="keyword">if</span>(sqrt(im(i)^2 + re(i)^2) &lt; 0.73)
+        <span class="keyword">if</span>(sqrt(im(i)^2 + re(i)^2) &gt; 0.65)
+            w_bw = wout(i);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Current plot held
+</pre><img vspace="5" hspace="5" src="ex_1_01.png" alt=""> <h2 id="2">The frequencie regions</h2><pre class="codeinput">text(2.01, -0.1,<span class="string">'\omega -&gt; 0'</span>);
+text(0.01, -0.1,<span class="string">'\omega -&gt; inf'</span>);
+text(0,0,[<span class="string">'w_b_w = '</span>, num2str(w_bw)]);
+text(0.2,0.2, [<span class="string">'Low pass filter, with a band: (0, '</span>, num2str(w_bw), <span class="string">')'</span>]);
+
+shg;
+</pre><img vspace="5" hspace="5" src="ex_1_02.png" alt=""> <h2 id="3">Simulating a sinwave input with a 1rad/s freq.</h2><p>the signal is amplified (obtained from the simulation)</p><pre class="codeinput">w = 1;
+f = w/2/pi;
+T = 1/f;
+t = 0:0.01:24*T;
+u = sin(w*t);
+
+figure;
+lsim(H, u,t);
+shg;
+</pre><img vspace="5" hspace="5" src="ex_1_03.png" alt=""> <h2 id="4">Simulating a sinwave input with a 1.3 rad/s freq.</h2><p>the signal is amplified (obtained from the simulation)</p><pre class="codeinput">w = 1.3;
+f = w/2/pi;
+T = 1/f;
+t = 0:0.01:24*T;
+u = sin(w*t);
+
+figure;
+
+lsim(H, u,t);
+shg;
+</pre><img vspace="5" hspace="5" src="ex_1_04.png" alt=""> <img vspace="5" hspace="5" src="ex_1_05.png" alt=""> <h2 id="5">b)</h2><p>Defining the tf function and ploting a the coresponding nyqusit diagramm</p><pre class="codeinput">figure;
+H = tf([1 4], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+<span class="comment">% only showing the positive freq.</span>
+setoptions(p,<span class="string">'ShowFullContour'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% plot a red, dashed line unit (0.7) circle</span>
+hold;
+x=0:0.1:2*pi;
+plot(0.7*sin(x),0.7*cos(x),<span class="string">'--r'</span>);
+shg;
+
+
+
+text(0.2,0.2, <span class="string">'Low pass filter, with a band: (0, 5.48)'</span>);
+
+shg;
+</pre><pre class="codeoutput">Current plot held
+</pre><img vspace="5" hspace="5" src="ex_1_06.png" alt=""> <img vspace="5" hspace="5" src="ex_1_07.png" alt=""> <h2 id="6">c)</h2><p>Defining the tf function and ploting a the coresponding nyqusit diagramm</p><pre class="codeinput">figure;
+H = tf([1 0 0], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+<span class="comment">% only showing the positive freq.</span>
+setoptions(p,<span class="string">'ShowFullContour'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% plot a red, dashed line unit (0.7) circle</span>
+hold <span class="string">on</span>;
+x=0:0.1:2*pi;
+plot(0.7*sin(x),0.7*cos(x),<span class="string">'--r'</span>);
+shg;
+
+
+text(-0.9,0.2, <span class="string">'High pass filter, with a band: (0.918, inf) '</span>);
+
+shg;
+</pre><img vspace="5" hspace="5" src="ex_1_08.png" alt=""> <img vspace="5" hspace="5" src="ex_1_09.png" alt=""> <h2 id="7">d)</h2><p>Defining the tf function and ploting a the coresponding nyqusit diagramm</p><pre class="codeinput">figure;
+H = tf([1 0], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+<span class="comment">% only showing the positive freq.</span>
+setoptions(p,<span class="string">'ShowFullContour'</span>,<span class="string">'off'</span>);
+
+<span class="comment">% plot a red, dashed line unit (0.7) circle</span>
+hold;
+x=0:0.1:2*pi;
+plot(0.7*sin(x),0.7*cos(x),<span class="string">'--r'</span>);
+shg;
+
+
+text(-0.9,0.2, <span class="string">'Band stop filter, with a band: (0, 4.18) U (0.795, inf) '</span>);
+
+shg;
+</pre><pre class="codeoutput">Current plot held
+</pre><img vspace="5" hspace="5" src="ex_1_10.png" alt=""> <img vspace="5" hspace="5" src="ex_1_11.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 4.1 Problems: Nyquist diagrams
+% a)
+% Defining the tf function and ploting a the coresponding nyqusit diagramm
+H = tf([2], [1 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+% only showing the positive freq.
+setoptions(p,'ShowFullContour','off'); 
+
+% plot a red, dashed line unit (0.7) circle
+hold;
+x=0:0.1:2*pi; 
+plot(0.7*sin(x),0.7*cos(x),'REPLACE_WITH_DASH_DASHr');
+shg;
+
+% Calculating the band_with freq.
+for i = 1:length(wout)
+    if(sqrt(im(i)^2 + re(i)^2) < 0.73)
+        if(sqrt(im(i)^2 + re(i)^2) > 0.65)
+            w_bw = wout(i);
+        end
+    end
+end
+
+%% The frequencie regions
+text(2.01, -0.1,'\omega -> 0');
+text(0.01, -0.1,'\omega -> inf');
+text(0,0,['w_b_w = ', num2str(w_bw)]);
+text(0.2,0.2, ['Low pass filter, with a band: (0, ', num2str(w_bw), ')']);
+
+shg;
+
+%% Simulating a sinwave input with a 1rad/s freq.
+% the signal is amplified (obtained from the simulation)
+w = 1;
+f = w/2/pi;
+T = 1/f;
+t = 0:0.01:24*T;
+u = sin(w*t);
+
+figure;
+lsim(H, u,t);
+shg;
+
+
+%% Simulating a sinwave input with a 1.3 rad/s freq.
+% the signal is amplified (obtained from the simulation)
+w = 1.3;
+f = w/2/pi;
+T = 1/f;
+t = 0:0.01:24*T;
+u = sin(w*t);
+
+figure;
+
+lsim(H, u,t);
+shg;
+
+%% b)
+% Defining the tf function and ploting a the coresponding nyqusit diagramm
+figure;
+H = tf([1 4], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+% only showing the positive freq.
+setoptions(p,'ShowFullContour','off'); 
+
+% plot a red, dashed line unit (0.7) circle
+hold;
+x=0:0.1:2*pi; 
+plot(0.7*sin(x),0.7*cos(x),'REPLACE_WITH_DASH_DASHr');
+shg;
+
+
+
+text(0.2,0.2, 'Low pass filter, with a band: (0, 5.48)');
+
+shg;
+
+%% c)
+% Defining the tf function and ploting a the coresponding nyqusit diagramm
+figure;
+H = tf([1 0 0], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+% only showing the positive freq.
+setoptions(p,'ShowFullContour','off'); 
+
+% plot a red, dashed line unit (0.7) circle
+hold on;
+x=0:0.1:2*pi; 
+plot(0.7*sin(x),0.7*cos(x),'REPLACE_WITH_DASH_DASHr');
+shg;
+
+
+text(-0.9,0.2, 'High pass filter, with a band: (0.918, inf) ');
+
+shg;
+
+%% d)
+% Defining the tf function and ploting a the coresponding nyqusit diagramm
+figure;
+H = tf([1 0], [0.3 1 1]);
+[re, im, wout] = nyquist(H);
+p = nyquistplot(H);
+
+% only showing the positive freq.
+setoptions(p,'ShowFullContour','off'); 
+
+% plot a red, dashed line unit (0.7) circle
+hold;
+x=0:0.1:2*pi; 
+plot(0.7*sin(x),0.7*cos(x),'REPLACE_WITH_DASH_DASHr');
+shg;
+
+
+text(-0.9,0.2, 'Band stop filter, with a band: (0, 4.18) U (0.795, inf) ');
+
+shg;
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,385 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>example</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-11-08"><meta name="DC.source" content="example.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Ploting the magnitude characteristics:</a></li><li><a href="#3">Ploting the phase characteristics:</a></li><li><a href="#4">Ploting the nyquist for H</a></li><li><a href="#6">Designing a proportional controller for</a></li><li><a href="#7">a)</a></li><li><a href="#8">b)</a></li><li><a href="#9">c)</a></li><li><a href="#10">d)</a></li><li><a href="#11">e)</a></li><li><a href="#12">f)</a></li><li><a href="#13">g)</a></li><li><a href="#14">h)</a></li></ul></div><pre class="codeinput">clear; clc; close <span class="string">all</span>;
+
+tau_m = 0.025; <span class="comment">% time delay given in seconds</span>
+H = tf(20,[1 0],<span class="string">'IOdelay'</span>,tau_m);
+
+w = logspace(0,3);
+[m,f] = bode(H,w);
+mm(1,:) = m(1,1,:);
+ff(1,:) = f(1,1,:);
+</pre><h2 id="2">Ploting the magnitude characteristics:</h2><p>is not changed with a time delay</p><pre class="codeinput">subplot(2,1,1);
+semilogx([1 10 20 1e2 1e3], [26 6 0 -14 -34], <span class="string">'g'</span>, <span class="string">'LineWidth'</span>,2);
+grid;
+hold;
+semilogx(w,20*log10(mm),<span class="string">'k'</span>);
+legend(<span class="string">'matlab characteristic'</span>,<span class="string">'appproximation by assymptotes'</span>);
+title(<span class="string">"Magnitude characteristic"</span>, <span class="string">'FontSize'</span>,18);
+hold
+</pre><pre class="codeoutput">Current plot held
+Current plot released
+</pre><img vspace="5" hspace="5" src="example_01.png" alt=""> <h2 id="3">Ploting the phase characteristics:</h2><pre class="codeinput">subplot(2,1,2);
+semilogx(w,ff,<span class="string">'g'</span>, <span class="string">'LineWidth'</span>,2);
+hold
+wtm = 1/tau_m; <span class="comment">%frequency of interest for time delay</span>
+semilogx([0.25 0.5 1 2 4]*wtm, -90-180/pi*[0.25 0.5 1 2 4],<span class="string">'*k-'</span>);
+semilogx([0.25 0.5 1 2 4]*wtm, -180/pi*[0.25 0.5 1 2 4],<span class="string">'ok-'</span>);
+info={<span class="string">'$\omega=\frac{0.25}{\tau_m}$'</span>,<span class="string">'$\omega=\frac{0.5}{\tau_m}$'</span>,<span class="string">'$\omega=\frac{1}{\tau_m}$'</span>,<span class="string">'$\omega=\frac{2}{\tau_m}$'</span>,<span class="string">'$\omega=\frac{4}{\tau_m}$'</span>};
+text([0.25 0.5 1  2 4]*wtm, -57*[0.25 0.5 1 2 4] + 15, info,<span class="string">'color'</span>,<span class="string">'k'</span>,<span class="string">'interpreter'</span>,<span class="string">'Latex'</span>,<span class="string">'FontSize'</span>,8);
+hold
+legend(<span class="string">'matlab characteristic'</span>,<span class="string">'5 points approximation'</span>,<span class="string">'-\tau_m\omega'</span>,   <span class="string">'Location'</span>,<span class="string">'southwest'</span>)
+axis([1,1e3,-360,10]);grid
+set(gca,<span class="string">'YTick'</span>,[-270,-180,-90,0]);shg
+</pre><pre class="codeoutput">Current plot held
+Current plot released
+</pre><img vspace="5" hspace="5" src="example_02.png" alt=""> <h2 id="4">Ploting the nyquist for H</h2><pre class="codeinput">figure
+nyquist(H)
+</pre><img vspace="5" hspace="5" src="example_03.png" alt=""> <pre class="codeinput">k = 1;
+tau_m = 0.2;
+
+H =tf([-0.5 1]*k, [1 0],<span class="string">'IOdelay'</span>,tau_m);
+
+wmin = -1;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+shg;
+</pre><img vspace="5" hspace="5" src="example_04.png" alt=""> <h2 id="6">Designing a proportional controller for</h2><p>obataining a closed loop stables ystem:</p><pre class="codeinput"><span class="comment">%Answer:</span>
+<span class="comment">%We have to find the critical point(in which the nyquist plot crosses the real axes for the first time)</span>
+<span class="comment">%If we need to choose k in such a way that if whe change k the critical</span>
+<span class="comment">%point will be smaller than -1 radius, real{pc}*k should be &lt; -1; where pc</span>
+<span class="comment">%is the critical point, that means that k should be between 0 and</span>
+<span class="comment">%1/real{pc} for a closed loop stbale system.</span>
+</pre><h2 id="7">a)</h2><pre class="codeinput">tau_m = 1/8;
+
+H =tf(10, [1 3],<span class="string">'IOdelay'</span>,tau_m);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+shg;
+
+<span class="comment">% k should be between (0,1/5.09) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_05.png" alt=""> <h2 id="8">b)</h2><pre class="codeinput">k = 1/1.8;
+
+H =tf([1 900]*k, [1 500]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between[1.8, inf) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_06.png" alt=""> <h2 id="9">c)</h2><pre class="codeinput">k = 1e11;
+H =tf([1 -9e-6]*k, [1 5e6]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between(0, 1e12) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_07.png" alt=""> <h2 id="10">d)</h2><pre class="codeinput">k = 1/0.5;
+
+H =tf([1 9]*k, [1 -5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between (1/1.8, inf) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_08.png" alt=""> <h2 id="11">e)</h2><pre class="codeinput">k = 0.0001;
+
+H =tf([-1 9]*k, [1 5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between (0, 1) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_09.png" alt=""> <h2 id="12">f)</h2><pre class="codeinput">k = 1;
+
+H =tf([1 9]*k, [-1 5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between (1, inf) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_10.png" alt=""> <h2 id="13">g)</h2><pre class="codeinput">k = 1/1.79;
+
+H =tf([-1 9]*k, [1 -5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between (1/1.8, 1) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_11.png" alt=""> <h2 id="14">h)</h2><pre class="codeinput">k = 1;
+
+H =tf((1)*k, conv([1 1 0], [1 4]));
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+<span class="comment">% k should be between (1, 20) to be (remain) closed loop stable;</span>
+</pre><img vspace="5" hspace="5" src="example_12.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+clear; clc; close all;
+
+tau_m = 0.025; % time delay given in seconds
+H = tf(20,[1 0],'IOdelay',tau_m);
+
+w = logspace(0,3);
+[m,f] = bode(H,w);
+mm(1,:) = m(1,1,:);
+ff(1,:) = f(1,1,:);
+
+%% Ploting the magnitude characteristics:
+% is not changed with a time delay
+subplot(2,1,1);
+semilogx([1 10 20 1e2 1e3], [26 6 0 -14 -34], 'g', 'LineWidth',2);
+grid; 
+hold;
+semilogx(w,20*log10(mm),'k');
+legend('matlab characteristic','appproximation by assymptotes');
+title("Magnitude characteristic", 'FontSize',18);
+hold
+
+%% Ploting the phase characteristics:
+subplot(2,1,2);
+semilogx(w,ff,'g', 'LineWidth',2);
+hold
+wtm = 1/tau_m; %frequency of interest for time delay
+semilogx([0.25 0.5 1 2 4]*wtm, -90-180/pi*[0.25 0.5 1 2 4],'*k-');
+semilogx([0.25 0.5 1 2 4]*wtm, -180/pi*[0.25 0.5 1 2 4],'ok-');
+info={'$\omega=\frac{0.25}{\tau_m}$','$\omega=\frac{0.5}{\tau_m}$','$\omega=\frac{1}{\tau_m}$','$\omega=\frac{2}{\tau_m}$','$\omega=\frac{4}{\tau_m}$'};
+text([0.25 0.5 1  2 4]*wtm, -57*[0.25 0.5 1 2 4] + 15, info,'color','k','interpreter','Latex','FontSize',8);
+hold 
+legend('matlab characteristic','5 points approximation','-\tau_m\omega',   'Location','southwest')
+axis([1,1e3,-360,10]);grid
+set(gca,'YTick',[-270,-180,-90,0]);shg
+
+%% Ploting the nyquist for H
+figure
+nyquist(H)
+%%
+k = 1;
+tau_m = 0.2;
+
+H =tf([-0.5 1]*k, [1 0],'IOdelay',tau_m);
+
+wmin = -1;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+shg;
+
+%% Designing a proportional controller for
+% obataining a closed loop stables ystem:
+
+%Answer:
+%We have to find the critical point(in which the nyquist plot crosses the real axes for the first time)
+%If we need to choose k in such a way that if whe change k the critical
+%point will be smaller than -1 radius, real{pc}*k should be < -1; where pc
+%is the critical point, that means that k should be between 0 and
+%1/real{pc} for a closed loop stbale system.
+
+
+%%  a)
+tau_m = 1/8;
+
+H =tf(10, [1 3],'IOdelay',tau_m);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+shg;
+
+% k should be between (0,1/5.09) to be (remain) closed loop stable;
+
+%% b)
+k = 1/1.8;
+
+H =tf([1 900]*k, [1 500]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between[1.8, inf) to be (remain) closed loop stable;
+
+%% c)
+k = 1e11;
+H =tf([1 -9e-6]*k, [1 5e6]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between(0, 1e12) to be (remain) closed loop stable;
+
+%% d)
+k = 1/0.5;
+
+H =tf([1 9]*k, [1 -5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between (1/1.8, inf) to be (remain) closed loop stable;
+
+%% e)
+k = 0.0001;
+
+H =tf([-1 9]*k, [1 5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between (0, 1) to be (remain) closed loop stable;
+
+%% f)
+k = 1;
+
+H =tf([1 9]*k, [-1 5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between (1, inf) to be (remain) closed loop stable;
+
+%% g)
+k = 1/1.79;
+
+H =tf([-1 9]*k, [1 -5]);
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between (1/1.8, 1) to be (remain) closed loop stable;
+
+%% h)
+k = 1;
+
+H =tf((1)*k, conv([1 1 0], [1 4]));
+
+wmin = -2;
+wmax = 2;
+w = logspace(wmin,wmax,1e4);
+figure;
+nyquist(H,w)
+
+% k should be between (1, 20) to be (remain) closed loop stable;
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,11 @@
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\bin\Debug\ex1.exe.config
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\bin\Debug\ex1.exe
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\bin\Debug\ex1.pdb
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.csproj.AssemblyReference.cache
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.MainForm.resources
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.LoginForm.resources
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.Properties.Resources.resources
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.csproj.GenerateResource.cache
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.csproj.CoreCompileInputs.cache
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.exe
+C:\FACULTA\AN3SEM2\II\Labs\lab2\ex1\ex1\obj\Debug\ex1.pdb

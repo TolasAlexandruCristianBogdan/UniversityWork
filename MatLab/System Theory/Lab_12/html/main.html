@@ -1,0 +1,292 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>main</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-12-22"><meta name="DC.source" content="main.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Lab_12 problem 3.1 from lab 11</a></li><li><a href="#3">discritizing the controller using tustin</a></li><li><a href="#4">discritizing the tf using zoh method</a></li><li><a href="#5">obtaining the open loop discrete tf</a></li><li><a href="#6">analyzing the closed loop stability depending on k with rlocus</a></li><li><a href="#7">generate the control signal c(kT) starting from the discrete controller structure</a></li><li><a href="#8">generate the control signal for ref(t) = 1;</a></li><li><a href="#9">hw for k = 3 represent the command signal</a></li><li><a href="#10">we can simulate the simulink example:</a></li></ul></div><h2 id="1">Lab_12 problem 3.1 from lab 11</h2><pre class="codeinput">clear; clc; close <span class="string">all</span>;
+</pre><pre class="codeinput">k    = 1;
+taum = 0.02; <span class="comment">%s</span>
+Hc = k*tf(1,[1 0]); <span class="comment">%controller structure</span>
+Hp = zpk([],[-20 -40], 2400, <span class="string">'iodelay'</span>, taum)
+</pre><pre class="codeoutput">
+Hp =
+ 
+                     2400
+  exp(-0.02*s) * -------------
+                 (s+20) (s+40)
+ 
+Continuous-time zero/pole/gain model.
+
+</pre><h2 id="3">discritizing the controller using tustin</h2><pre class="codeinput"><span class="comment">%(</span>
+<span class="comment">% tustuin-bilinear transformation:</span>
+<span class="comment">% we replace s -&gt; 2/T(z-1)/(z+1)</span>
+<span class="comment">%</span>
+<span class="comment">% backward Euler transformation:</span>
+<span class="comment">% we replace s-&gt; (z-1)/T/z</span>
+<span class="comment">%</span>
+<span class="comment">% forward Euler transformation:</span>
+<span class="comment">% we replace s-&gt; (z-1)/T</span>
+<span class="comment">% )</span>
+
+<span class="comment">%time constants of the process, the time delay and the input frequencies</span>
+<span class="comment">% time constants: 1/20, 1/40 (we have to choose the biggest one) -&gt; 1/20 (50ms)</span>
+<span class="comment">% and compare it to the time delay whitch is 20 ms</span>
+<span class="comment">% we see that 10 ms would be sufficient to cover the time constants and the</span>
+<span class="comment">% time delay to;</span>
+T = 0.01;
+Hcd = tf(T,[1,-1],T) <span class="comment">%discrete tf for a controller (integrator) using forward euler</span>
+</pre><pre class="codeoutput">
+Hcd =
+ 
+  0.01
+  -----
+  z - 1
+ 
+Sample time: 0.01 seconds
+Discrete-time transfer function.
+
+</pre><h2 id="4">discritizing the tf using zoh method</h2><pre class="codeinput">Hpd = c2d(Hp,T,<span class="string">'zoh'</span>)
+</pre><pre class="codeoutput">
+Hpd =
+ 
+            0.098576 (z+0.8187)
+  z^(-2) * ---------------------
+           (z-0.8187) (z-0.6703)
+ 
+Sample time: 0.01 seconds
+Discrete-time zero/pole/gain model.
+
+</pre><h2 id="5">obtaining the open loop discrete tf</h2><pre class="codeinput">Hold = Hcd*Hpd
+</pre><pre class="codeoutput">
+Hold =
+ 
+              0.00098576 (z+0.8187)
+  z^(-2) * ---------------------------
+           (z-1) (z-0.8187) (z-0.6703)
+ 
+Sample time: 0.01 seconds
+Discrete-time zero/pole/gain model.
+
+</pre><h2 id="6">analyzing the closed loop stability depending on k with rlocus</h2><pre class="codeinput">rlocus(Hold)
+<span class="comment">%stability:</span>
+<span class="comment">% a system is stable if it is in the unit cricle</span>
+<span class="comment">% we have 5 branches</span>
+<span class="comment">% for k from 0 to 7.86  the sys is asimptotically stable</span>
+
+<span class="comment">% behaviours:</span>
+<span class="comment">% k from 1.01 to 7.86 the closed loop system is underdamped</span>
+<span class="comment">% k = 1.01 the system is critically damped</span>
+<span class="comment">% k from 0 to 1.01 the system is overdamped damped</span>
+<span class="comment">% k = 7.86 the system is undamped</span>
+</pre><img vspace="5" hspace="5" src="main_01.png" alt=""> <h2 id="7">generate the control signal c(kT) starting from the discrete controller structure</h2><pre class="codeinput"><span class="comment">%C(z) = Hcd(z)*E(z)</span>
+<span class="comment">%C(z)*(z-1) = 0.01*E(a) now apply the inverse Z transfrom</span>
+<span class="comment">% c[(k+1)]-c[kT] = 0.01*e(kT)</span>
+<span class="comment">% c[(k+1)T]-c[kT] = 0.01*(ref(kT)-y(kT)) we shift it back with one sample</span>
+<span class="comment">% c(kT)=c((k-1)*T) + 0.01* (ref((k-1)T)-y((k-1)T))</span>
+</pre><h2 id="8">generate the control signal for ref(t) = 1;</h2><p>store the outputs y(t);</p><pre class="codeinput">y = step(feedback(Hold,1));
+
+c(1)=0;
+<span class="keyword">for</span> k=2:length(y)
+    c(k)=c(k-1) + 0.01* (1-y(k-1));
+<span class="keyword">end</span>
+
+t = 0:T:(length(y)-1)*T;
+figure;
+stem(t,c);
+</pre><pre class="codeoutput">Warning: Use the state-space representation for more efficient modeling of
+discrete-time delays. 
+</pre><img vspace="5" hspace="5" src="main_02.png" alt=""> <h2 id="9">hw for k = 3 represent the command signal</h2><pre class="codeinput">k_3 = 3;
+Hcd_3 = Hcd*k_3;
+
+Hold_3 = Hcd_3*Hpd,1;
+y_3 = step(feedback(Hold_3,1));
+
+c_3(1)=0;
+<span class="keyword">for</span> k=2:length(y_3)
+    c_3(k)=c_3(k-1) + 0.01* (1-y_3(k-1));
+<span class="keyword">end</span>
+
+t_3 = 0:T:(length(y_3)-1)*T;
+figure;
+stem(t,c_3);
+</pre><pre class="codeoutput">
+Hold_3 =
+ 
+              0.0029573 (z+0.8187)
+  z^(-2) * ---------------------------
+           (z-1) (z-0.8187) (z-0.6703)
+ 
+Sample time: 0.01 seconds
+Discrete-time zero/pole/gain model.
+
+Warning: Use the state-space representation for more efficient modeling of
+discrete-time delays. 
+</pre><img vspace="5" hspace="5" src="main_03.png" alt=""> <h2 id="10">we can simulate the simulink example:</h2><p>by calculating the tf from ref to command signal</p><pre class="codeinput">H_ref_c = feedback(Hcd_3,Hpd);
+cs = step(H_ref_c)/k_3;
+ts = 0:T:(length(cs)-1)*T;
+hold <span class="string">on</span>
+stairs(ts,cs,<span class="string">'r'</span>);
+hold <span class="string">off</span>
+legend(<span class="string">'calculated control signal'</span>, <span class="string">'simulink control signal'</span>)
+</pre><pre class="codeoutput">Warning: Use the state-space representation for more efficient modeling of
+discrete-time delays. 
+</pre><img vspace="5" hspace="5" src="main_04.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Lab_12 problem 3.1 from lab 11
+clear; clc; close all;
+%%
+k    = 1;
+taum = 0.02; %s
+Hc = k*tf(1,[1 0]); %controller structure
+Hp = zpk([],[-20 -40], 2400, 'iodelay', taum)
+
+%% discritizing the controller using tustin
+%(
+% tustuin-bilinear transformation:
+% we replace s -> 2/T(z-1)/(z+1)
+%
+% backward Euler transformation:
+% we replace s-> (z-1)/T/z
+%
+% forward Euler transformation:
+% we replace s-> (z-1)/T
+% )
+
+%time constants of the process, the time delay and the input frequencies
+% time constants: 1/20, 1/40 (we have to choose the biggest one) -> 1/20 (50ms)
+% and compare it to the time delay whitch is 20 ms
+% we see that 10 ms would be sufficient to cover the time constants and the
+% time delay to;
+T = 0.01; 
+Hcd = tf(T,[1,-1],T) %discrete tf for a controller (integrator) using forward euler
+
+%% discritizing the tf using zoh method 
+Hpd = c2d(Hp,T,'zoh')
+
+%% obtaining the open loop discrete tf
+Hold = Hcd*Hpd
+
+%% analyzing the closed loop stability depending on k with rlocus
+rlocus(Hold)
+%stability:
+% a system is stable if it is in the unit cricle
+% we have 5 branches
+% for k from 0 to 7.86  the sys is asimptotically stable
+
+% behaviours:
+% k from 1.01 to 7.86 the closed loop system is underdamped 
+% k = 1.01 the system is critically damped
+% k from 0 to 1.01 the system is overdamped damped
+% k = 7.86 the system is undamped
+
+%% generate the control signal c(kT) starting from the discrete controller structure
+%C(z) = Hcd(z)*E(z)
+%C(z)*(z-1) = 0.01*E(a) now apply the inverse Z transfrom
+% c[(k+1)]-c[kT] = 0.01*e(kT)
+% c[(k+1)T]-c[kT] = 0.01*(ref(kT)-y(kT)) we shift it back with one sample
+% c(kT)=c((k-1)*T) + 0.01* (ref((k-1)T)-y((k-1)T))
+
+%% generate the control signal for ref(t) = 1;
+% store the outputs y(t);
+y = step(feedback(Hold,1));
+
+c(1)=0;
+for k=2:length(y)
+    c(k)=c(k-1) + 0.01* (1-y(k-1));
+end
+
+t = 0:T:(length(y)-1)*T;
+figure;
+stem(t,c);
+
+%% hw for k = 3 represent the command signal
+k_3 = 3;
+Hcd_3 = Hcd*k_3;
+
+Hold_3 = Hcd_3*Hpd,1;
+y_3 = step(feedback(Hold_3,1));
+
+c_3(1)=0;
+for k=2:length(y_3)
+    c_3(k)=c_3(k-1) + 0.01* (1-y_3(k-1));
+end
+
+t_3 = 0:T:(length(y_3)-1)*T;
+figure;
+stem(t,c_3);
+
+%% we can simulate the simulink example:
+% by calculating the tf from ref to command signal
+H_ref_c = feedback(Hcd_3,Hpd);
+cs = step(H_ref_c)/k_3;
+ts = 0:T:(length(cs)-1)*T;
+hold on
+stairs(ts,cs,'r');
+hold off
+legend('calculated control signal', 'simulink control signal')
+##### SOURCE END #####
+--></body></html>

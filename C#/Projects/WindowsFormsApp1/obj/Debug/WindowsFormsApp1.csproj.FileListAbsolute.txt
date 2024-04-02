@@ -1,0 +1,37 @@
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\Raluca\Desktop\II\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Cristi\Desktop\An3\sem2\sem2\II\Lab\Teme\Tema1\Ralu\OneDrive_2023-04-11\Nemes Raluca-Tema1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\FACULTA\AN3SEM2\II\Homeworks\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

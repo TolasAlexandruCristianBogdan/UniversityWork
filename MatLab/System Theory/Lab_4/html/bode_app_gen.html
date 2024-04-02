@@ -1,0 +1,361 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>bode_app_gen</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-10-27"><meta name="DC.source" content="bode_app_gen.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Bode magnmitude and phase characteristics calculator</a></li><li><a href="#2">Functions:</a></li></ul></div><h2 id="1">Bode magnmitude and phase characteristics calculator</h2><pre class="codeinput">clear <span class="string">all</span>;
+<span class="comment">% Define the transfer function (going trough all of them):</span>
+
+H_a(1) = zpk([],[-3], 10);                  <span class="comment">%a)</span>
+H_a(2) = zpk([-70],[-20],0.2);              <span class="comment">%b)</span>
+H_a(3) = zpk([0],[-7],2);                   <span class="comment">%c)</span>
+H_a(4) = zpk([],[0 -7],20);                 <span class="comment">%d)</span>
+H_a(5) = zpk([],[0 -1/7],5/7);              <span class="comment">%e)</span>
+H_a(6) = zpk([],[-1 -10],75);               <span class="comment">%f)</span>
+H_a(7) = zpk([-2],[-1/3 -1/2], 2/6);        <span class="comment">%g)</span>
+H_a(8) = zpk([-1/10],[-1/3 -1/2], 2*10/6);  <span class="comment">%h)</span>
+H_a(9) = zpk([-2],[-5, -10], 20);           <span class="comment">%i)</span>
+
+<span class="keyword">for</span> id = 1:9
+H = H_a(id);
+<span class="comment">% define the freq. boundaries (1ex):</span>
+wmin =-1;
+wmax = 3;
+
+<span class="comment">% Reading the zeros and the poles:</span>
+z = abs(cell2mat(H.Z));
+p = abs(cell2mat(H.P));
+
+<span class="comment">% Calculating the gain:</span>
+<span class="comment">% Function calculating the gain:</span>
+
+k = k_cal(H,z,p);
+
+<span class="comment">% Calculating the freq. of the approximation points:</span>
+wma = wma_cal(z,p,k, wmin, wmax);
+<span class="comment">%Calculating the magnitudes of the approx. points:</span>
+m = zeros(length(wma)-1,1);
+[m,wma] = mag_cal(wma,m,k);
+
+<span class="comment">% Ploting the magnitudes and the phases:</span>
+plot_app(H,wma,m);
+
+<span class="keyword">end</span>
+</pre><h2 id="2">Functions:</h2><pre class="codeinput"><span class="comment">% Function calculating the gain:</span>
+<span class="keyword">function</span> k = k_cal(H,z,p)
+    <span class="keyword">if</span> length(z) ~= 0
+        <span class="keyword">for</span> i = 1:length(z)
+            <span class="keyword">if</span> z(i) == 0
+                z_k(i) = 1;
+            <span class="keyword">else</span>
+                z_k(i) = z(i);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">else</span>
+        z_k = 1;
+    <span class="keyword">end</span>
+
+
+
+    <span class="keyword">if</span> length(p) ~= 0
+        <span class="keyword">for</span> i = 1:length(p)
+            <span class="keyword">if</span> p(i) == 0
+                p_k(i) = 1;
+            <span class="keyword">else</span>
+                p_k(i) = p(i);
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">else</span>
+        p_k = 1;
+    <span class="keyword">end</span>
+
+    k = H.K*prod(z_k)/prod(p_k);
+
+<span class="keyword">end</span>
+
+<span class="comment">% Function for obtaining wma</span>
+<span class="comment">% (Doing some magic to get wma matrix with more info)</span>
+<span class="keyword">function</span> wma = wma_cal(z,p,k, wmin, wmax)
+    aux = wmin:wmax;
+    wma = 10.^aux;
+    wma = [wma' zeros(length(wma),1)];
+
+    <span class="comment">%adding zeros and poles to wma</span>
+    z = [z ones(length(z),1)];
+    p = [p ones(length(p),1)*(-1)];
+    zap   = [z; p];
+    zap   = sortrows(zap);
+
+    wma = [wma ; zap];
+    wma = sortrows(wma);
+
+    <span class="keyword">for</span> i= 1:length(wma)-1
+        <span class="keyword">if</span> wma(i,1) == wma(i+1,1)
+            <span class="keyword">if</span> wma(i,2) == 0
+                wma = [wma(1:i-1,:); wma(i+1:end,:)];
+            <span class="keyword">else</span>
+                 wma = [wma(1:i,:); wma(i+2:end,:)];
+            <span class="keyword">end</span>
+            <span class="keyword">break</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+
+<span class="comment">% Function calculating the magnitudes:</span>
+<span class="keyword">function</span> [m,wma] = mag_cal(wma,m,k,type)
+    <span class="keyword">if</span> wma(1,1) == 0
+        coeff = wma(1,2)*20;
+        m(1) = 20*(log10(k))*3;
+        wma = wma(2:end,:);
+    <span class="keyword">else</span>
+        coeff = 0;
+        m(1) = 20*log10(k);
+    <span class="keyword">end</span>
+
+    <span class="keyword">for</span> i = 2:length(wma)
+        coeff = coeff + wma(i-1,2)*20;
+        m(i) = m(i-1) + coeff*log10(wma(i,1)/wma(i-1,1));
+
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">% Function for plotting the results:</span>
+<span class="keyword">function</span> plot_app(H,wma,m)
+
+    [m_b,f_b,w_b] = bode(H,{wma(1,1),wma(end,1)});
+
+    figure;
+    <span class="comment">% Ploting the main bode plots</span>
+    semilogx(w_b,20*log10(squeeze(m_b)),<span class="string">"b"</span>);
+    hold <span class="string">all</span>;
+    <span class="comment">% Ploting the approximated points:</span>
+    <span class="keyword">for</span> i=1:length(m)
+        semilogx(wma(i,1),m(i),<span class="string">'ro'</span>, <span class="string">'LineWidth'</span>,2);
+    <span class="keyword">end</span>
+    <span class="comment">% Ploting the approximated line</span>
+    semilogx(wma, m, <span class="string">'r-'</span>, <span class="string">"LineWidth"</span>,2);
+    hold <span class="string">off</span>;
+    legend(<span class="string">"Matlab"</span>, <span class="string">"Approximated"</span>);
+    title(<span class="string">'Magnitude characteristics'</span>);
+    grid;shg;
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+Warning: Negative data ignored 
+</pre><img vspace="5" hspace="5" src="bode_app_gen_01.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_02.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_03.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_04.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_05.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_06.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_07.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_08.png" alt=""> <img vspace="5" hspace="5" src="bode_app_gen_09.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Bode magnmitude and phase characteristics calculator
+clear all;
+% Define the transfer function (going trough all of them):
+
+H_a(1) = zpk([],[-3], 10);                  %a)
+H_a(2) = zpk([-70],[-20],0.2);              %b)
+H_a(3) = zpk([0],[-7],2);                   %c)
+H_a(4) = zpk([],[0 -7],20);                 %d)
+H_a(5) = zpk([],[0 -1/7],5/7);              %e)
+H_a(6) = zpk([],[-1 -10],75);               %f)
+H_a(7) = zpk([-2],[-1/3 -1/2], 2/6);        %g)
+H_a(8) = zpk([-1/10],[-1/3 -1/2], 2*10/6);  %h)
+H_a(9) = zpk([-2],[-5, -10], 20);           %i)
+
+for id = 1:9
+H = H_a(id);
+% define the freq. boundaries (1ex):
+wmin =-1;
+wmax = 3;
+
+% Reading the zeros and the poles:
+z = abs(cell2mat(H.Z));
+p = abs(cell2mat(H.P));
+
+% Calculating the gain:
+% Function calculating the gain:
+
+k = k_cal(H,z,p);
+
+% Calculating the freq. of the approximation points:
+wma = wma_cal(z,p,k, wmin, wmax);
+%Calculating the magnitudes of the approx. points:
+m = zeros(length(wma)-1,1);
+[m,wma] = mag_cal(wma,m,k);
+
+% Ploting the magnitudes and the phases: 
+plot_app(H,wma,m);
+
+end
+%% Functions:
+
+% Function calculating the gain:
+function k = k_cal(H,z,p)
+    if length(z) ~= 0
+        for i = 1:length(z)
+            if z(i) == 0
+                z_k(i) = 1;
+            else
+                z_k(i) = z(i);
+            end
+        end
+    else
+        z_k = 1;
+    end
+    
+
+    
+    if length(p) ~= 0
+        for i = 1:length(p)
+            if p(i) == 0
+                p_k(i) = 1;
+            else
+                p_k(i) = p(i);
+            end
+        end
+    else
+        p_k = 1;
+    end
+
+    k = H.K*prod(z_k)/prod(p_k);
+
+end
+
+% Function for obtaining wma
+% (Doing some magic to get wma matrix with more info)
+function wma = wma_cal(z,p,k, wmin, wmax)
+    aux = wmin:wmax;
+    wma = 10.^aux;
+    wma = [wma' zeros(length(wma),1)];
+    
+    %adding zeros and poles to wma
+    z = [z ones(length(z),1)];
+    p = [p ones(length(p),1)*(-1)];
+    zap   = [z; p];
+    zap   = sortrows(zap);
+    
+    wma = [wma ; zap];
+    wma = sortrows(wma);
+    
+    for i= 1:length(wma)-1
+        if wma(i,1) == wma(i+1,1)
+            if wma(i,2) == 0
+                wma = [wma(1:i-1,:); wma(i+1:end,:)];
+            else
+                 wma = [wma(1:i,:); wma(i+2:end,:)];
+            end    
+            break
+        end
+    end
+end
+
+
+% Function calculating the magnitudes:
+function [m,wma] = mag_cal(wma,m,k,type)
+    if wma(1,1) == 0
+        coeff = wma(1,2)*20;
+        m(1) = 20*(log10(k))*3;
+        wma = wma(2:end,:);
+    else
+        coeff = 0;
+        m(1) = 20*log10(k);
+    end
+
+    for i = 2:length(wma)
+        coeff = coeff + wma(i-1,2)*20;
+        m(i) = m(i-1) + coeff*log10(wma(i,1)/wma(i-1,1));
+
+    end
+end
+
+% Function for plotting the results:
+function plot_app(H,wma,m) 
+    
+    [m_b,f_b,w_b] = bode(H,{wma(1,1),wma(end,1)});
+    
+    figure;
+    % Ploting the main bode plots
+    semilogx(w_b,20*log10(squeeze(m_b)),"b");
+    hold all;
+    % Ploting the approximated points:
+    for i=1:length(m)
+        semilogx(wma(i,1),m(i),'ro', 'LineWidth',2);
+    end
+    % Ploting the approximated line
+    semilogx(wma, m, 'r-', "LineWidth",2);
+    hold off;
+    legend("Matlab", "Approximated");
+    title('Magnitude characteristics');
+    grid;shg;
+
+end
+##### SOURCE END #####
+--></body></html>

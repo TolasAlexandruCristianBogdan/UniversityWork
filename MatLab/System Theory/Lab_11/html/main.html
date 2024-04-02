@@ -1,0 +1,271 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>main</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-12-14"><meta name="DC.source" content="main.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">S2 - Simulating for diferent values of k the step response of the system</a></li><li><a href="#3">S3</a></li></ul></div><pre class="codeinput"><span class="comment">% Stability analysis off discrete time control structures:</span>
+clear; close <span class="string">all</span>; clc
+
+<span class="comment">%S1 - Stability analysis depending on k</span>
+num = [1 2];
+den = [4 -3 -1];
+Hp = tf(num,den)
+
+T = 0.2/10;                <span class="comment">% sampling period</span>
+Hdes = c2d(Hp,T,<span class="string">'zoh'</span>)  <span class="comment">% open loop discrete time transfer function</span>
+
+figure;
+subplot(121);
+rlocus(Hp);
+title(<span class="string">"Continuous-time approach"</span>);
+text(-8,2,<span class="string">'$H_{des}(s)=\frac{s+2}{(4s+1)(s-1)}$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>,<span class="string">'FontSize'</span>,12);
+
+subplot(122);rlocus(Hdes);title(<span class="string">'Discrete-time approach'</span>)
+text(-0.5,0.6,<span class="string">'$H_{des}(z)=\frac{0.064563 (z-0.6655)}{(z-1.221) (z-0.9512)}$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>,<span class="string">'FontSize'</span>,12)
+
+<span class="comment">% Looking on both the discrete and continuous root-graph we can see that in</span>
+<span class="comment">% the descrete time domain the system remains stable for k from 3.78 to 40.3;</span>
+<span class="comment">% the continuous time domain is stable for k from 3 to inf;</span>
+<span class="comment">% we can observe that the domain for k for which the system remains stable</span>
+<span class="comment">% is seginificantly reduced from inf -&gt; 40.3 as an upper limit.</span>
+</pre><pre class="codeoutput">
+Hp =
+ 
+       s + 2
+  ---------------
+  4 s^2 - 3 s - 1
+ 
+Continuous-time transfer function.
+
+
+Hdes =
+ 
+  0.005138 z - 0.004937
+  ---------------------
+  z^2 - 2.015 z + 1.015
+ 
+Sample time: 0.02 seconds
+Discrete-time transfer function.
+
+</pre><img vspace="5" hspace="5" src="main_01.png" alt=""> <h2 id="2">S2 - Simulating for diferent values of k the step response of the system</h2><pre class="codeinput">k = 16;
+<span class="comment">%sampling theorem no longer works for k = 16;</span>
+<span class="comment">% the system for k from (25.4,27) the system is overdamped</span>
+<span class="comment">%a solution would be to work with a smaller sampling period</span>
+Ho = feedback(k*Hp,1);
+figure;
+subplot(121)
+step(feedback(k*Hdes,1),4);
+hold <span class="string">on</span>
+step(Ho);
+hold <span class="string">off</span>
+subplot(122);
+pzmap(feedback(k*Hdes,1));
+
+<span class="comment">% we tested it for</span>
+<span class="comment">% k = 3.77</span>
+<span class="comment">% k = 16</span>
+</pre><img vspace="5" hspace="5" src="main_02.png" alt=""> <img vspace="5" hspace="5" src="main_03.png" alt=""> <h2 id="3">S3</h2><pre class="codeinput">Hp = zpk([],[-20 -40],2400);
+Ts = 1/300;
+Tmax = 1/20; <span class="comment">%1/poles coefficients, we need to take the largest</span>
+Ct = Tmax/10; <span class="comment">% we want 10 samples in each period</span>
+Tt = 4*Tmax;
+
+Hdes =c2d(Hp,Ts);
+figure;
+rlocus(Hdes)
+<span class="comment">% from rlocus for k from (0, 15.7) the closed loop is asimptotically stable</span>
+<span class="comment">% for k from (0, 0.0396), Overdamped system (two real and distinctived poles)</span>
+
+
+figure;
+k = 0.03; <span class="comment">% k from (0, 0.396)</span>
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title(<span class="string">"step response for k = 0.03, Overdamped system"</span>);
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+</pre><img vspace="5" hspace="5" src="main_04.png" alt=""> <img vspace="5" hspace="5" src="main_05.png" alt=""> <img vspace="5" hspace="5" src="main_06.png" alt=""> <pre class="codeinput">figure;
+k = 0.0396; <span class="comment">% k = 0.396</span>
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title(<span class="string">"step response for k = 0.0396, Crtitically damped system"</span>);
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+</pre><img vspace="5" hspace="5" src="main_07.png" alt=""> <img vspace="5" hspace="5" src="main_08.png" alt=""> <pre class="codeinput">figure;
+k = 5; <span class="comment">% k from (0.396 , 15.7)</span>
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title(<span class="string">"step response for k from (0.396 , 15.7), Underdamped system"</span>);
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+</pre><img vspace="5" hspace="5" src="main_09.png" alt=""> <img vspace="5" hspace="5" src="main_10.png" alt=""> <pre class="codeinput">figure;
+k = 15.7; <span class="comment">% k = 15.7 (stability limit) undamped system</span>
+subplot(121)
+step(feedback(k*Hdes,1),0.4)
+title(<span class="string">"step response for k = 15.7, Unddamped system"</span>);
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+</pre><img vspace="5" hspace="5" src="main_11.png" alt=""> <img vspace="5" hspace="5" src="main_12.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+% Stability analysis off discrete time control structures:
+clear; close all; clc
+
+%S1 - Stability analysis depending on k
+num = [1 2];
+den = [4 -3 -1];
+Hp = tf(num,den)
+
+T = 0.2/10;                % sampling period
+Hdes = c2d(Hp,T,'zoh')  % open loop discrete time transfer function
+
+figure;
+subplot(121);
+rlocus(Hp);
+title("Continuous-time approach");
+text(-8,2,'$H_{des}(s)=\frac{s+2}{(4s+1)(s-1)}$','Interpreter','Latex','FontSize',12);
+
+subplot(122);rlocus(Hdes);title('Discrete-time approach')
+text(-0.5,0.6,'$H_{des}(z)=\frac{0.064563 (z-0.6655)}{(z-1.221) (z-0.9512)}$','Interpreter','Latex','FontSize',12)
+
+% Looking on both the discrete and continuous root-graph we can see that in
+% the descrete time domain the system remains stable for k from 3.78 to 40.3; 
+% the continuous time domain is stable for k from 3 to inf;
+% we can observe that the domain for k for which the system remains stable
+% is seginificantly reduced from inf -> 40.3 as an upper limit.
+
+
+%% S2 - Simulating for diferent values of k the step response of the system
+k = 16; 
+%sampling theorem no longer works for k = 16;
+% the system for k from (25.4,27) the system is overdamped
+%a solution would be to work with a smaller sampling period
+Ho = feedback(k*Hp,1);
+figure;
+subplot(121)
+step(feedback(k*Hdes,1),4);
+hold on
+step(Ho);
+hold off
+subplot(122);
+pzmap(feedback(k*Hdes,1));
+
+% we tested it for 
+% k = 3.77
+% k = 16 
+
+%% S3  
+Hp = zpk([],[-20 -40],2400);
+Ts = 1/300;
+Tmax = 1/20; %1/poles coefficients, we need to take the largest
+Ct = Tmax/10; % we want 10 samples in each period
+Tt = 4*Tmax;
+
+Hdes =c2d(Hp,Ts);
+figure;
+rlocus(Hdes)
+% from rlocus for k from (0, 15.7) the closed loop is asimptotically stable
+% for k from (0, 0.0396), Overdamped system (two real and distinctived poles)
+
+
+figure;
+k = 0.03; % k from (0, 0.396)
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title("step response for k = 0.03, Overdamped system");
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+
+%%
+figure;
+k = 0.0396; % k = 0.396
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title("step response for k = 0.0396, Crtitically damped system");
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+
+%%
+figure;
+k = 5; % k from (0.396 , 15.7)
+subplot(121)
+step(feedback(k*Hdes,1),1)
+title("step response for k from (0.396 , 15.7), Underdamped system");
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+
+%%
+figure;
+k = 15.7; % k = 15.7 (stability limit) undamped system
+subplot(121)
+step(feedback(k*Hdes,1),0.4)
+title("step response for k = 15.7, Unddamped system");
+subplot(122)
+pzmap(feedback(k*Hdes,1))
+
+
+##### SOURCE END #####
+--></body></html>
